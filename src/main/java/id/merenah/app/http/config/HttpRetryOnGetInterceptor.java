@@ -1,6 +1,5 @@
-package id.merenah.app.http.config;//package com.pajakku.http.client.config;
+package id.merenah.app.http.config;
 //
-//import com.pajakku.http.client.exception.HttpRetryException;
 //import lombok.SneakyThrows;
 //import lombok.extern.slf4j.Slf4j;
 //import okhttp3.Interceptor;
