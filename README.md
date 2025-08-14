@@ -1,5 +1,7 @@
 # VewHttp
 
+[![](https://jitpack.io/v/avew/vew-http.svg)](https://jitpack.io/#avew/vew-http)
+
 A robust Java HTTP client library built on top of OkHttp3 and Retrofit2, providing simplified configuration and enhanced features for HTTP communication.
 
 ## Features
