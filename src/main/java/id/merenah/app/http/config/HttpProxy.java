@@ -1,0 +1,46 @@
+package id.merenah.app.http.config;
+
+import id.merenah.app.http.enumeration.ProxyType;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static id.merenah.app.http.config.HttpConfig.mask;
+
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class HttpProxy {
+
+    @Builder.Default
+    private boolean proxy = false;
+    @Builder.Default
+    private ProxyType type = ProxyType.HTTP;
+    @Builder.Default
+    private boolean auth = false;
+    private String username;
+    private String password;
+    @Builder.Default
+    private List<String> urlSkip = new ArrayList<>();
+    private String host;
+    private int port;
+
+    @Override
+    public String toString() {
+        return "CustomProxy{" +
+                "proxy=" + proxy +
+                ", auth=" + auth +
+                ", username='" + mask(username) + '\'' +
+                ", password='" + mask(password) + '\'' +
+                ", urlSkip=" + urlSkip +
+                ", host='" + host + '\'' +
+                ", port=" + port +
+                '}';
+    }
+}
